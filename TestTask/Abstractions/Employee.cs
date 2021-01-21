@@ -4,8 +4,8 @@
 
     public abstract class Employee
     {
-        protected readonly Position position;
         private readonly string fullName;
+        public readonly Position position;
 
         public string FullName { get => this.fullName; }
         public double Еxperience { get; set; }
