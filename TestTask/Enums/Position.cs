@@ -2,10 +2,10 @@
 {
     public enum Position
     {
-        Worker,
+        Workers,
 
-        Manager,
+        Managers,
 
-        Foreman,
+        Foremans,
     }
 }
