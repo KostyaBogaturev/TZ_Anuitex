@@ -1,10 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace TestTask.Models
+﻿namespace TestTask.Models
 {
     using Abstractions;
+    using System;
+    using System.Collections.Generic;
+    using System.Text;
+
     public class Firm
     {
         private List<Employee> list = new List<Employee>();
@@ -19,6 +19,38 @@ namespace TestTask.Models
         {
             firm.list.Remove(item);
             return firm;
+        }
+
+        public List<TEmployee> GetEmployee<TEmployee>()
+            where TEmployee : Employee
+        {
+            var newList = new List<TEmployee>();
+
+            foreach (var item in this.list)
+            {
+                if (item is TEmployee)
+                {
+                    newList.Add(item as TEmployee);
+                }
+            }
+
+            return newList;
+        }
+
+        public int CountOfEmployee<TEmployee>()
+            where TEmployee : Employee
+        {
+            int count = 0;
+
+            foreach (var item in this.list)
+            {
+                if (item is TEmployee)
+                {
+                    count++;
+                }
+            }
+
+            return count;
         }
     }
 }
