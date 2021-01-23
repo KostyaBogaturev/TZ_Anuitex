@@ -4,6 +4,7 @@
     using System;
     using System.Collections.Generic;
     using System.Text;
+    using Helper;
 
     public class Firm
     {
@@ -51,6 +52,11 @@
             }
 
             return count;
+        }
+
+        public void Print()
+        {
+            this.list.Print();
         }
     }
 }
