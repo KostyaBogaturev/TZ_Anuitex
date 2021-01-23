@@ -19,5 +19,10 @@
 
         public abstract void Work();
 
+        public override string ToString()
+        {
+            return $"{FullName}: {position}, {Еxperience}";
+        }
+
     }
 }
