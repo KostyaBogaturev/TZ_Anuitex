@@ -58,5 +58,10 @@
         {
             this.list.Print();
         }
+
+        public bool Incude(string fullName)
+        {
+            return list.Includ(fullName);
+        }
     }
 }
